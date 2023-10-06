@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
-const cors = require('cors')
+
 
 const ChatRoutes = require('./routes/chats')
 
@@ -16,7 +16,7 @@ app.use((req , res , next) => {
     next()
 })
 
-app.use( '/api' ,ChatRoutes)
+app.use( '' ,ChatRoutes)
 
 mongoose.connect(process.env.MONG_URL)
 .then(() => {
