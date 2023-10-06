@@ -16,7 +16,7 @@ app.use((req , res , next) => {
     next()
 })
 
-app.use( '' ,ChatRoutes)
+app.use( '/api' ,ChatRoutes)
 
 mongoose.connect(process.env.MONG_URL)
 .then(() => {
